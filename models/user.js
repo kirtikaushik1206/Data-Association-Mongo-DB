@@ -5,7 +5,10 @@ const mongoose= require ('mongoose');
        username:String,
        email:String,
        age:Number,
-       posts: Array,
+       posts: [{
+            type: mongoose.Schema.Types.ObjectId, //posts id
+            ref: 'post'
+  } ]
 
  })
 
